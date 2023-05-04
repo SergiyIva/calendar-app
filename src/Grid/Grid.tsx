@@ -4,6 +4,7 @@ import { Table } from "./Table/Table";
 import { DataType, useAppContext } from "../State/AppContext";
 import _ from "lodash";
 import { useCallback, useEffect } from "react";
+
 export const Grid = () => {
   const { data, weekDays } = useAppContext();
   const getData = useCallback(() => {
@@ -22,7 +23,6 @@ export const Grid = () => {
       .value();
   }, [data, weekDays]);
 
-  useEffect(() => console.log(data), [data]);
   return (
     <S.Wrapper>
       <Times />

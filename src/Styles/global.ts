@@ -7,7 +7,7 @@ export default createGlobalStyle`
   } 
 
 html {
-  font-family: Arial sans-serif;
+  font-family: Arial, serif;
   color: ${({ theme }) => theme.colors.font};
   background-image: ${({ theme }) => theme.colors.revert};
 }

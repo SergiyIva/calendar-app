@@ -29,15 +29,15 @@ export const MonthAndYear = ({ weekDays, setWeekDays }: MonthAndYearProps) => {
 
   const toForward = useCallback(() => {
     const firstDayOfNextWeek = addDays(_.last(weekDays)!, 1);
-    setWeekDays(getWeek(firstDayOfNextWeek.toLocaleDateString()));
-    setDay(firstDayOfNextWeek.toLocaleDateString());
+    setWeekDays(getWeek(firstDayOfNextWeek.toDateString()));
+    setDay(firstDayOfNextWeek.toDateString());
   }, [weekDays]);
 
   const toPrevious = useCallback(() => {
     const lastDayOfPrevWeek = subDays(_.first(weekDays)!, 1);
-    const newWeek = getWeek(lastDayOfPrevWeek.toLocaleDateString());
+    const newWeek = getWeek(lastDayOfPrevWeek.toDateString());
     setWeekDays(newWeek);
-    setDay(newWeek[0].toLocaleDateString());
+    setDay(newWeek[0].toDateString());
   }, [weekDays]);
 
   return (

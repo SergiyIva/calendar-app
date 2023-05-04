@@ -24,10 +24,10 @@ export const defaultValue: ContextType = {
   data: [],
   setData: () => {},
   selectedEvent: null,
-  day: new Date().toLocaleDateString(),
+  day: new Date().toDateString(),
   setDay: () => {},
   setSelectedEvent: () => {},
-  weekDays: getWeek(new Date().toLocaleDateString()),
+  weekDays: getWeek(new Date().toDateString()),
   setWeekDays: () => {}
 };
 export const AppContext = React.createContext<ContextType>(defaultValue);

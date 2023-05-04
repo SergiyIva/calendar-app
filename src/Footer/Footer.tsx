@@ -27,7 +27,7 @@ export const Footer = () => {
     <S.Footer>
       <S.ActionItem
         isVisible={true}
-        onClick={() => setDay(new Date().toLocaleDateString())}
+        onClick={() => setDay(new Date().toDateString())}
       >
         Today
       </S.ActionItem>

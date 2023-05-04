@@ -10,7 +10,7 @@ const days = ["M", "T", "W", "T", "F", "S", "S"];
 export const Week = ({ weekDays }: WeekProps) => {
   const { day, setDay } = useAppContext();
   const onClickDay = (date: Date) => {
-    setDay(date.toLocaleDateString());
+    setDay(date.toDateString());
   };
   return (
     <>
@@ -22,9 +22,9 @@ export const Week = ({ weekDays }: WeekProps) => {
       <S.NumWeekContainer>
         {weekDays.map((d) => (
           <DateComponent
-            key={d.toLocaleDateString()}
+            key={d.toDateString()}
             num={d.getDate()}
-            isActive={day === d.toLocaleDateString()}
+            isActive={day === d.toDateString()}
             onClick={() => onClickDay(d)}
           />
         ))}
