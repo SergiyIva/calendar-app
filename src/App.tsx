@@ -6,10 +6,7 @@ import { Header } from "./Header/Header";
 import { Wrapper } from "./Styles";
 import { Footer } from "./Footer/Footer";
 import { Grid } from "./Grid/Grid";
-import { AppContext, getWeek } from "./State/AppContext";
-import { defaultValue } from "./State/AppContext";
-import { addDays, startOfWeek } from "date-fns";
-import _ from "lodash";
+import { AppContext, defaultValue, getWeek } from "./State/AppContext";
 
 const initData = [
   {

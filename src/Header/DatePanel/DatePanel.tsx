@@ -1,13 +1,10 @@
 import * as S from "./Styles";
-import { useEffect, useState } from "react";
 import { useAppContext } from "../../State/AppContext";
-import { addDays, startOfWeek } from "date-fns";
-import _ from "lodash";
 import { Week } from "./Week/Week";
 import { MonthAndYear } from "./MonthAndYear/MonthAndYear";
 
 export const DatePanel = () => {
-  const { day, weekDays, setWeekDays } = useAppContext();
+  const { weekDays, setWeekDays } = useAppContext();
 
   return (
     <S.Divider>
